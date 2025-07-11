@@ -1,1 +1,57 @@
 
+{
+  "version": 1,
+  "author": "Smriti Aggarwal",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": -26.67, "left": -2.67, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot1", "top": 180, "left": -150, "attrs": {} },
+    { "type": "wokwi-potentiometer", "id": "pot2", "top": 260, "left": -150, "attrs": {} },
+    {
+      "type": "board-ssd1306",
+      "id": "oled",
+      "top": 137.54,
+      "left": 230.63,
+      "attrs": { "i2cAddress": "0x3C" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzzer",
+      "top": 250,
+      "left": 160,
+      "attrs": { "volume": "0.1" }
+    },
+    { "type": "wokwi-led", "id": "ledR", "top": -90, "left": -100, "attrs": { "color": "red" } },
+    { "type": "wokwi-led", "id": "ledG", "top": -90, "left": -60, "attrs": { "color": "green" } },
+    { "type": "wokwi-led", "id": "ledB", "top": -90, "left": -20, "attrs": { "color": "blue" } }
+  ],
+  "connections": [
+    [ "pot1:VCC", "esp:3V3", "red", [ "h53", "v-116.67" ] ],
+    [ "pot1:GND", "esp:GND.2", "black", [ "h-51.8", "v-126.17" ] ],
+    [ "pot1:SIG", "esp:39", "green", [ "v0" ] ],
+    [ "pot2:VCC", "esp:3V3", "red", [ "h53", "v-196.67" ] ],
+    [ "pot2:GND", "esp:GND.2", "black", [ "h-61.4", "v-206.17" ] ],
+    [ "pot2:SIG", "esp:36", "green", [ "v0" ] ],
+    [ "oled:GND", "esp:GND.1", "black", [ "h-172.8", "v-21.67" ] ],
+    [ "oled:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "oled:SCL", "esp:22", "green", [ "v0" ] ],
+    [ "oled:SDA", "esp:21", "green", [ "v0" ] ],
+    [ "buzzer:1", "esp:5", "green", [ "v0" ] ],
+    [ "ledR:A", "esp:18", "red", [ "v0" ] ],
+    [ "ledR:C", "esp:GND.1", "black", [ "v0" ] ],
+    [ "ledG:A", "esp:19", "green", [ "v0" ] ],
+    [ "ledG:C", "esp:GND.1", "black", [ "v0" ] ],
+    [ "ledB:A", "esp:23", "blue", [ "v0" ] ],
+    [ "ledB:C", "esp:GND.1", "black", [ "v0" ] ],
+    [ "esp:D22", "oled:SCL", "green", [ "h0" ] ],
+    [ "oled:SDA", "esp:D21", "green", [ "v0" ] ],
+    [ "esp:VP", "pot1:SIG", "green", [ "h-213.53", "v241.17" ] ],
+    [ "esp:VN", "pot2:SIG", "green", [ "h-194.33", "v311.17" ] ],
+    [ "esp:GND.2", "buzzer:1", "black", [ "h141.67", "v211.67" ] ],
+    [ "buzzer:2", "esp:D5", "green", [ "h-72.2", "v-269.37" ] ],
+    [ "esp:D18", "ledR:A", "green", [ "h-165.83", "v-103.03" ] ],
+    [ "esp:D19", "ledG:A", "green", [ "h0" ] ],
+    [ "esp:D23", "ledB:A", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
