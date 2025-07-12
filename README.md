@@ -11,6 +11,18 @@ This project simulates a real-time satellite health monitoring system using an *
 
 > 
 
+https://github.com/user-attachments/assets/20eee430-b703-4062-a517-6371f627b756
+
+
+
+with arduino -
+
+
+
+https://github.com/user-attachments/assets/8ee2f2c2-4094-40c5-a447-d4f5ffbb4a92
+
+
+
 ---
 
 ## 🔧 Hardware Simulation
